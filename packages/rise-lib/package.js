@@ -22,29 +22,34 @@ Package.onUse(function (api) {
     // includes the meteor core components and any 3rd party items we
     // will include in the app
     var coreMdgPackages = [
-        'meteor-platform'
-        , 'underscore'
-        , 'autopublish' // to remove
-        , 'insecure'    // to remove
-        , 'check'
-        , 'reactive-dict'
-        , 'reactive-var'
-        , 'accounts-base@1.2.0'
-        , 'accounts-password@1.1.1'
-        , 'http'
-        , 'babel-compiler@5.6.15'
-        , 'babel-runtime@0.1.3'
-        , 'react@0.1.10'
-        , 'geojson-utils@1.0.3'
-
+        'standard-minifiers'
+        ,'meteor-base'
+        ,'mobile-experience'
+        ,'mongo'
+        ,'less'
+        ,'session'
+        ,'jquery'
+        ,'tracker'
+        ,'logging'
+        ,'reload'
+        ,'random'
+        ,'ejson'
+        ,'accounts-password'
+        ,'check'
+        ,'react'
+        ,'http'
+        ,'reactive-var'
+        ,'d3'
     ];
 
     // globally accessible third party stuff we will use throughout the app
     // don't forget to pin the versions...
     // todo: kardia versions
     var thirdPartyPackages = [
-        'kadira:flow-router@2.6.0'
-        , 'kadira:react-layout@1.3.0'
+        'fourseven:scss'
+        ,'reactrouter:react-router'
+        ,'fortawesome:fontawesome'
+        ,'pauloborges:mapbox'
         , 'tap:i18n@1.5.1'
     ];
 

@@ -8,8 +8,9 @@
 rise-core
 
 ####################### rise functionality ######################
-rise-actors
+# rise-actors
 # rise-situations
+# rise-actions
 # rise-noficiations
 # rise-i18n
 # rise-maps

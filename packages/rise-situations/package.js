@@ -2,9 +2,10 @@ Package.describe({
   name: 'rise-situations',
   version: '0.0.1',
   summary: 'situations in the action',
-  git: 'https://github.com/timbmccoy/Rise.git',
+  git: 'https://github.com/cog-64/Rise.git',
   documentation: 'README.md'
 });
+
 
 Package.onUse(function(api) {
   api.versionsFrom("1.2.0.1");
@@ -14,26 +15,29 @@ Package.onUse(function(api) {
   api.use(packages);
 
   // common files
-  api.addFiles([
-      'lib/collections.js'
-      , 'lib/routes.js'
-      , 'lib/schema.js'
-  ], ['client', 'server']);
+  //api.addFiles([
+  //  'lib/collections.js'
+  //  , 'lib/routes.js'
+  //  , 'lib/schema.js'
+  //], ['client', 'server']);
+  //
 
-  // server files
-  api.addFiles([
-    'lib/server/seeds.js'
-      ]);
+  //// server files
+  //api.addFiles([
+  //  'lib/server/seeds.js'
+  //]);
 
   // client only files
   //api.addFiles([
   //  'lib/client/seeds.js'
   //]);
 
-
-  api.export([
-      'Situations'
-  ]);
+  // add the language files
+  var languages = ["en", "fr"];
+  var languagesPaths = languages.map(function (language) {
+    return "i18n/"+language+".i18n.json";
+  });
+  api.addFiles(languagesPaths, ["client", "server"]);
 
 });
 

@@ -1,46 +1,22 @@
 Package.describe({
   name: 'rise-i18n',
   version: '0.0.1',
-  summary: 'language elements of the user interface',
-  git: 'https://github.com/timbmccoy/Rise.git',
+  summary: 'language elements of the user interface.  Lifted verbatim from Sacha Greifs TelescopeJS',
+  git: 'https://github.com/cog-64/Rise.git',
   documentation: 'README.md'
 });
 
-Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.3');
+Package.onUse(function (api) {
 
-  // reference the rise-core and anything that is strictly limited to this package
-  var packages = ['rise-core@0.0.1'];
-  api.use(packages);
+  api.versionsFrom(['METEOR@1.0']);
 
-  // common files
-  //api.addFiles([
-  //  'lib/collections.js'
-  //  , 'lib/routes.js'
-  //  , 'lib/schema.js'
-  //], ['client', 'server']);
-  //
-  //// server files
-  //api.addFiles([
-  //  'lib/server/seeds.js'
-  //]);
+  api.use(['rise-lib']);
 
-  // client only files
-  //api.addFiles([
-  //  'lib/client/seeds.js'
-  //]);
+  api.use(["session"], "client");
 
+  api.addFiles(['i18n.js'], ['client', 'server']);
 
-  //api.export([
-  //  'Situations'
-  //]);
-
-});
-
-Package.onTest(function(api) {
-  api.use('rise-i18n', ['client','server']);
-  api.use('sanjo:jasmine@0.18.0');
-
-  api.addFiles('tests/client/client-tests.js', 'client');
-  api.addFiles('test/server/server-test.js', 'server');
+  api.export([
+    'i18n'
+  ]);
 });

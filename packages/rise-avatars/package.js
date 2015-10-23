@@ -2,7 +2,7 @@ Package.describe({
   name: 'rise-avatars',
   version: '0.0.1',
   summary: 'representation of actors in visual form',
-  git: 'https://github.com/timbmccoy/Rise.git',
+  git: 'https://github.com/cog-64/Rise.git',
   documentation: 'README.md'
 });
 
@@ -20,6 +20,7 @@ Package.onUse(function(api) {
   //  , 'lib/schema.js'
   //], ['client', 'server']);
   //
+
   //// server files
   //api.addFiles([
   //  'lib/server/seeds.js'
@@ -30,10 +31,13 @@ Package.onUse(function(api) {
   //  'lib/client/seeds.js'
   //]);
 
+  // add the language files
+  var languages = ["en", "fr"];
+  var languagesPaths = languages.map(function (language) {
+    return "i18n/"+language+".i18n.json";
+  });
+  api.addFiles(languagesPaths, ["client", "server"]);
 
-  //api.export([
-  //  'Situations'
-  //]);
 
 });
 

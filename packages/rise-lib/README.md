@@ -1,8 +1,12 @@
-## rise-actors
-The representation of actors in an action
+## rise-lib
+Exports  the namespace of the app (RISE) and its api.
+api.imply-s the package namespaces
+Defines all the packages we depend on in this one single place.
+Provides a layer of indirection between 3rd party code and bespoke application package modules
 
 #### Features
-- todo:
+- references no code that is bespoke to the app
+- referenced soley and only by core package
 
 #### Contents
 
@@ -12,24 +16,13 @@ The representation of actors in an action
 4. License
 
 #### Basic Usage
-todo:
+
 
 #### API
-rise-actors relies on ... to represent actors in the action.
 
-Example API usage:
-todo:
-
-```
-Template.exampleTemplate.events({
-  'click .check-group': function() {
-   todo: ...
-  }
-});
-```
 
 #### Tests
-rise-actors comes with a set of client and server side tests 
+
 
 
 #### License
