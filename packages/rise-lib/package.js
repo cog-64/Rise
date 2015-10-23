@@ -8,7 +8,7 @@ Package.describe({
    name: 'rise-lib', // use this if calling a meteor add
     summary: 'rise libraries',
     version: '0.0.1', //update if want meteor update to find this
-    git: 'https://github.com/timbmccoy/Rise.git',
+    git: 'https://github.com/cog-64/Rise.git',
     documentation: 'README.md'
 
 });
@@ -16,7 +16,7 @@ Package.describe({
 Package.onUse(function (api) {
 
 
-    api.versionsFrom(['METEOR@1.0']);
+    api.versionsFrom("1.2.0.1");
 
     // these are required for the package to be considered runnable
     // includes the meteor core components and any 3rd party items we

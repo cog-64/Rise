@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom(['METEOR@1.0']);
+  api.versionsFrom("1.2.0.1");
 
   // should only reference the rise-lib,
   var packages = ['rise-lib@0.0.1'];
