@@ -4,6 +4,9 @@
 ### WebStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
+##temp files
+*~
+
 *.iml
 
 ## Directory-based project format:
