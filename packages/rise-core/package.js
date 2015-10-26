@@ -2,7 +2,7 @@ Package.describe({
   name: 'rise-core',
   version: '0.0.1',
   summary: 'application skeleton: layout pages and router config',
-  git: 'https://github.com/timbmccoy/Rise.git',
+  git: 'https://github.com/cog-64/Rise.git',
   documentation: 'README.md'
 });
 
@@ -23,11 +23,10 @@ Package.onUse(function(api) {
   // client files
   api.addFiles([
           'lib/client/stylesheets/styles.css'
-          , 'lib/client/templates/layout.html'
-          , 'lib/client/templates/not-found.html'
       ]
       , 'client');
 
+    api.addAssets('lib/client/index.html', 'client');
 
 });
 
